@@ -1,0 +1,85 @@
+<div class="jf-form">
+    <div class="jf-section">
+        <label>Form</label>
+         <div class="jf-group">
+            <div class="jf-row">
+                <label>Group</label>
+            </div>
+            <div class="jf-row">
+                <div class="jf-field">
+                    <label>Picker</label>
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+                <div class="jf-field">
+                    <label>Name</label>
+                    <input type="text" placeholder="John Appleseed"></input>
+                </div>
+            </div>
+            <div class="jf-row">
+                <div class="jf-area">
+                    <label>Text</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+         </div>
+         <div class="jf-group">
+            <div class="jf-row">
+                <label>Group</label>
+            </div>
+            <div class="jf-row">
+                <div class="jf-field">
+                    <label>First name</label>
+                    <input type="text" placeholder="John">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="first_name" />
+                        </xsl:attribute>
+                    </input>
+                </div>
+                <div class="jf-field">
+                    <label>Last name</label>
+                    <input type="text" placeholder="Appleseed">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="last_name" />
+                        </xsl:attribute>
+                    </input>
+                </div>
+            </div>
+            <div class="jf-row">
+                <div class="jf-field">
+                    <label>Phone number</label>
+                    <input type="text" placeholder="00000000" min="1" max="50">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="phones/phone/tph_number" />
+                        </xsl:attribute>
+                    </input>
+                </div>
+                <div class="jf-field">
+                    <label>E-mail</label>
+                    <input type="text" class="jf-field-input" placeholder="johnappleseed@apple.com">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="email" />
+                        </xsl:attribute>
+                    </input>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="jf-section" id="personer">
+        <label>People</label>
+        <div class="jf-add" onclick="addPerson()">
+            <label>Add person</label>
+        </div>
+    </div>
+    <div class="jf-row">
+        <div class="jf-download" onclick="">
+            <label>Download XML</label>
+        </div>
+        <div class="jf-submit" onclick="">
+            <label>Send to Recipient</label>
+        </div>
+    </div>
+</div>

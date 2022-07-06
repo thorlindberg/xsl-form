@@ -1,0 +1,183 @@
+:root {
+    --jf-stroke: 1px;
+    --jf-gap-min: 7.5px;
+    --jf-gap: 17.5px;
+    --jf-gap-max: 30px;
+    --jf-radius: 6px;
+    --jf-font-size: 0.8em;
+    --jf-gray-border: rgb(230, 230, 230);
+}
+
+.jf-form {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--jf-font-size);
+    gap: var(--jf-gap-max);
+}
+
+.jf-section {
+    border: var(--jf-stroke) solid var(--jf-gray-border);
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 var(--jf-gap) 0;
+    gap: var(--jf-gap);
+}
+
+.jf-section > *:not(label) {
+    margin-left: var(--jf-gap);
+    margin-right: var(--jf-gap);
+}
+
+.jf-group {
+    border: var(--jf-stroke) solid var(--jf-gray-border);
+    display: flex;
+    flex-direction: column;
+    gap: var(--jf-gap);
+    padding: var(--jf-gap);
+}
+
+.jf-section > label {
+    gap: var(--jf-gap);
+    padding: var(--jf-gap);
+    background-color: rgb(250, 250, 250);
+    font-weight: 550;
+    width: 100%;
+    border-bottom: var(--jf-stroke) solid var(--jf-gray-border);
+}
+
+.jf-row {
+    display: flex;
+    flex-direction: row;
+    gap: var(--jf-gap);
+    justify-content: end;
+}
+
+.jf-row > label {
+    font-weight: 550;
+    width: 100%;
+    margin-left: var(--jf-gap);
+}
+
+.jf-toggle {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    gap: var(--jf-gap-min);
+    margin-right: var(--jf-gap);
+}
+
+.jf-field {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: var(--jf-stroke) solid var(--jf-gray-border);
+    background-color: rgb(250, 250, 250);
+}
+
+.jf-nil {
+    display: block;
+    width: 100%;
+}
+
+.jf-field > label {
+    white-space: nowrap;
+    width: 80%;
+    padding: var(--jf-gap-min) var(--jf-gap) var(--jf-gap-min) var(--jf-gap);
+    border-right: var(--jf-stroke) solid var(--jf-gray-border);
+}
+
+.jf-field > input, .jf-field > select {
+    width: 100%;
+    padding: var(--jf-gap-min) var(--jf-gap) var(--jf-gap-min) var(--jf-gap);
+    background-color: rgb(255, 255, 255);
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.jf-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: var(--jf-stroke) solid var(--jf-gray-border);
+    background-color: rgb(250, 250, 250);
+}
+
+.jf-area > label {
+    white-space: nowrap;
+    padding: var(--jf-gap-min) var(--jf-gap) var(--jf-gap-min) var(--jf-gap);
+    border-bottom: var(--jf-stroke) solid var(--jf-gray-border);
+}
+
+.jf-area > textarea {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    padding: var(--jf-gap) var(--jf-gap) var(--jf-gap-min) var(--jf-gap);
+    background-color: rgb(255, 255, 255);
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.jf-add, .jf-remove, .jf-download, .jf-submit {
+    cursor: pointer;
+}
+
+.jf-add > label, .jf-remove > label, .jf-download > label, .jf-submit > label {
+    white-space: nowrap;
+    padding: var(--jf-gap-min) var(--jf-gap) var(--jf-gap-min) var(--jf-gap);
+    cursor: pointer;
+}
+
+.jf-add {
+    border: var(--jf-stroke) solid rgb(189, 248, 199);
+    background-color: rgb(227, 250, 232);
+    color: rgb(44, 142, 60);
+    padding: var(--jf-gap-min) 0 var(--jf-gap-min) 0;
+}
+
+.jf-add:hover {
+    background-color: rgb(189, 248, 199);
+}
+
+.jf-remove {
+    border: var(--jf-stroke) solid rgb(253, 201, 201);
+    background-color: rgb(255, 227, 227);
+    color: rgb(255, 82, 82);
+    padding: var(--jf-gap-min) 0 var(--jf-gap-min) 0;
+    margin-top: -18.5px;
+}
+
+.jf-remove:hover {
+    background-color: rgb(253, 201, 201);
+}
+
+.jf-download {
+    border: var(--jf-stroke) solid rgb(253, 230, 221);
+    background-color: rgb(255, 245, 241);
+    color: rgb(255, 126, 71);
+    padding: var(--jf-gap-min) 0 var(--jf-gap-min) 0;
+}
+
+.jf-download:hover {
+    background-color: rgb(253, 230, 221);
+}
+
+.jf-submit {
+    border: var(--jf-stroke) solid rgb(213, 240, 255);
+    background-color: rgb(227, 242, 250);
+    color: rgb(77, 190, 251);
+    padding: var(--jf-gap-min) 0 var(--jf-gap-min) 0;
+}
+
+.jf-submit:hover {
+    background-color: rgb(213, 240, 255);
+}
